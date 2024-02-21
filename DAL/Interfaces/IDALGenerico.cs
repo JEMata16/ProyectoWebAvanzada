@@ -15,5 +15,6 @@ namespace DAL.Interfaces
 
         bool Add(TEntity entity);
         bool Remove(TEntity entity);
+        bool Update(TEntity entity);
     }
 }

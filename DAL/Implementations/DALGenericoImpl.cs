@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using Entities.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,20 @@ namespace DAL.Implementations
             {
                 Console.WriteLine(ex.Message);
                 return true;
+            }
+        }
+
+        public bool Update(TEntity entity)
+        {
+            try
+            {
+                _Context.Entry(entity).State = EntityState.Modified;
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
             }
         }
     }
