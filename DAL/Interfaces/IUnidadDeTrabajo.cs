@@ -8,6 +8,7 @@ namespace DAL.Interfaces
 {
     public interface IUnidadDeTrabajo
     {
+        IUsuarioDAL _usuarioDAL {  get; }
         bool Complete();
     }
 }

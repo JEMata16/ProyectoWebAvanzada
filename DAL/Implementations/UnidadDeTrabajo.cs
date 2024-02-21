@@ -10,11 +10,15 @@ namespace DAL.Implementations
 {
     public class UnidadDeTrabajo : IUnidadDeTrabajo
     {
+        public IUsuarioDAL _usuarioDAL { get; }
+
         private readonly CursosContext _context;
 
-        public UnidadDeTrabajo(CursosContext context)
+        public UnidadDeTrabajo(CursosContext context,
+            IUsuarioDAL usuarioDAL)
         {
             _context = context;
+            _usuarioDAL = usuarioDAL;
         }
 
         public bool Complete()
