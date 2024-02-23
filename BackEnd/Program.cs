@@ -1,3 +1,5 @@
+using BackEnd.Services.Implementations;
+using BackEnd.Services.Interfaces;
 using DAL.Implementations;
 using DAL.Interfaces;
 using Entities.Entities;
@@ -13,7 +15,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CursosContext>();
 
 builder.Services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajo>();
+//DALs
 builder.Services.AddScoped<IUsuarioDAL, UsuarioDALImpl>();
+
+//Services
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 
 var app = builder.Build();
