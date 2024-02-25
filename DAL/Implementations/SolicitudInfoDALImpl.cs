@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Implementations
 {
-    public class SolcitudInfoDALImpl : DALGenericoImpl<SolicitudesInformacion>, ISolicitudInfoDAL
+    public class SolicitudInfoDALImpl : DALGenericoImpl<SolicitudesInformacion>, ISolicitudInfoDAL
     {
-        public SolcitudInfoDALImpl(CursosContext context) : base(context)
+        public SolicitudInfoDALImpl(CursosContext context) : base(context)
         {
         }
     }

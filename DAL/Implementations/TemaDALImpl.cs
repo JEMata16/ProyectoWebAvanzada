@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Implementations
 {
-    public class TemasDALImpl : DALGenericoImpl<Tema>, ITemaDAL
+    public class TemaDALImpl : DALGenericoImpl<Tema>, ITemaDAL
     {
-        public TemasDALImpl(CursosContext context) : base(context)
+        public TemaDALImpl(CursosContext context) : base(context)
         {
         }
     }
